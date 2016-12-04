@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.design.widget.TextInputLayout
+    android:id="@+id/input_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:errorEnabled="false"
+    app:errorTextAppearance="@style/ErrorTextInputLayout"
+    app:hintTextAppearance="@style/HintTextInputLayout"
+    >
+
+    <com.melolchik.networkmanager.ui.view.custom.CustomFontEditText
+        android:id="@+id/input"
+        style="@style/Widget.Edit.Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</android.support.design.widget.TextInputLayout>

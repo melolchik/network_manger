@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Network Manager</string>
+
+
+    <!-- SELECT PLACE -->
+    <string name="select_place">Select College</string>
+    <string name="select_place_header_results">RESULTS</string>
+    <string name="select_place_empty_results">Nothing to show yet&#8230;</string>
+</resources>

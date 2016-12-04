@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#85868E</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_white_op16">#28FFFFFF</color> <!-- 16%255 to HEX -->
+    <color name="color_white_op70">#b2FFFFFF</color>
+    <color name="color_white_op60">#99FFFFFF</color>
+    <color name="color_red">#ff2d55</color>
+</resources>
