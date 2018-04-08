@@ -131,26 +131,7 @@ public class CollegeListAdapter extends RecyclerView.Adapter<CollegeListAdapter.
                 }
             });
         }
-
-      /*  public void setData(JsonStation jsonStation, int position){
-            //log("setData = " +position + "==> "+ jsonBusiness);
-            mBusinessDetailView.bindData(jsonStation,mCurrentLocation);
-            mBusinessDetailView.setClickable(true);
-            ImageView imageView = (ImageView) mBusinessDetailView.getRootView().findViewById(R.id.image_reefill);
-            //imageView.setImageResource(R.drawable.icon_campus);
-            mBusinessDetailView.getRootView().setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    //log("onClick v = " + view);
-                    int position = mRecyclerView.getChildAdapterPosition(view);
-                    JsonStation jsonBusiness1 = getBusiness(position);
-                    if(mListClickListener != null){
-                        mListClickListener.onBusinessClick(jsonBusiness1);
-                    }
-                }
-            });
-
-        }*/
+    
     }
 
     /**

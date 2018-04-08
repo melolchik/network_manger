@@ -1,4 +1,4 @@
-package com.melolchik.networkmanager.ui;
+package com.melolchik.networkmanager.ui.fragments;
 
 
 import android.os.Bundle;

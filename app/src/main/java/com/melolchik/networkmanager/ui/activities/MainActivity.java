@@ -1,4 +1,4 @@
-package com.melolchik.networkmanager.ui;
+package com.melolchik.networkmanager.ui.activities;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 
 import com.melolchik.networkmanager.R;
 import com.melolchik.networkmanager.network.NetworkManager;
+import com.melolchik.networkmanager.ui.fragments.BaseFragment;
+import com.melolchik.networkmanager.ui.fragments.SelectCollegeFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        NetworkManager.createInstance(this.getApplicationContext());
-        showFragment(SelectCollegeFragment.createInstance(R.string.select_place,R.string.select_place,null),false,false);
+        showFragment(SelectCollegeFragment.createInstance(R.string.select_place, R.string.select_place, null), false, false);
     }
 
     /**

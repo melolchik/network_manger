@@ -7,9 +7,11 @@ import android.location.Location;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.provider.Settings;
+import android.support.annotation.StringRes;
 import android.util.DisplayMetrics;
 import android.view.inputmethod.InputMethodManager;
 
+import android.widget.Toast;
 import com.google.android.gms.maps.model.LatLng;
 import com.melolchik.networkmanager.R;
 
@@ -17,7 +19,28 @@ import com.melolchik.networkmanager.R;
  * Created by Olga Melekhina on 01.07.2016.
  */
 public class Util {
-    public static final int MAX_DISTANCE = 5; //miles
+    /**
+     * The constant context.
+     */
+    public static Context mContext;
+    
+    /**
+     * Init.
+     *
+     * @param context the context
+     */
+    public static void init(Context context) {
+        mContext = context;
+    }
+    
+    /**
+     * Gets context.
+     *
+     * @return the context
+     */
+    public static Context getApplicationContext() {
+        return mContext;
+    }
 
     public static String notEmptyString(String origin) {
         return origin == null ? "" : origin.trim();
@@ -133,7 +156,55 @@ public class Util {
         String twoString = String.format( "%.3f_%.3f", two.getLatitude(),two.getLongitude());
         return oneString.equals(twoString);
     }
-
+    
+    /**
+     * Return a localized string from the application's package's
+     * default string table.
+     *
+     * @param resId Resource id for the string
+     */
+    public static final String getString(@StringRes int resId) {
+        if (mContext == null) return "";
+        return mContext.getString(resId);
+    }
+    
+    /**
+     * Return a localized formatted string from the application's package's
+     * default string table, substituting the format arguments as defined in
+     * {@link java.util.Formatter} and {@link java.lang.String#format}.
+     *
+     * @param resId      Resource id for the format string
+     * @param formatArgs The format arguments that will be used for substitution.
+     */
+    
+    public static final String getString(@StringRes int resId, Object... formatArgs) {
+        if (mContext == null) return "";
+        return mContext.getString(resId, formatArgs);
+    }
+    
+    /**
+     * Show error toast.
+     *
+     * @param message the message
+     */
+    public static void showErrorToast(String message) {
+        if (mContext == null)
+            return;
+        Toast toast = Toast.makeText(mContext, message, Toast.LENGTH_LONG);
+        toast.show();
+    }
+    
+    /**
+     * Show error toast.
+     *
+     * @param message the message
+     */
+    public static void showErrorToast(@StringRes int message) {
+        if (mContext == null)
+            return;
+        Toast toast = Toast.makeText(mContext, message, Toast.LENGTH_LONG);
+        toast.show();
+    }
     protected static void log(String message) {
        // AppLogger.log(Util.class.getSimpleName() + " " + message);
     }

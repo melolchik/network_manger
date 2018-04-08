@@ -1,7 +1,6 @@
-package com.register.common.ui.viewimpl;
+package com.melolchik.networkmanager.ui.iviews;
 
-
-import com.register.common.ui.presenter.Presenter;
+import com.melolchik.networkmanager.ui.presenters.Presenter;
 
 /**
  * Created by melolchik on 29.03.2017.

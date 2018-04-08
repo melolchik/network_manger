@@ -1,1 +1,1 @@
-# network_manger
+# Пример использования Retrofit & MVP

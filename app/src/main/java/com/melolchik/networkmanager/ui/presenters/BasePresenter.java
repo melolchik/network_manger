@@ -1,14 +1,12 @@
-package com.register.common.ui.presenter;
+package com.melolchik.networkmanager.ui.presenters;
 
 import android.text.TextUtils;
-
-import com.register.common.components.MessageItem;
-import com.register.common.ui.viewimpl.BaseView;
-import com.register.common.ui.viewimpl.ErrorView;
-import com.register.common.ui.viewimpl.ProgressView;
-import com.register.common.ui.viewimpl.SuccessView;
-import com.register.common.util.AppLogger;
-import com.register.common.util.Util;
+import com.melolchik.networkmanager.components.MessageItem;
+import com.melolchik.networkmanager.ui.iviews.BaseView;
+import com.melolchik.networkmanager.ui.iviews.ErrorView;
+import com.melolchik.networkmanager.ui.iviews.ProgressView;
+import com.melolchik.networkmanager.ui.iviews.SuccessView;
+import com.melolchik.networkmanager.utils.Util;
 
 /**
  * Created by melolchik on 07.08.2017.
@@ -56,14 +54,14 @@ public class BasePresenter implements Presenter<BaseView> {
     }
 
     protected void showProgress(){
-        AppLogger.log("showProgress");
+        //AppLogger.log("showProgress");
         if(getProgressViewImpl() != null){
             getProgressViewImpl().showProgressBar(this);
         }
     }
 
     protected void hideProgress(){
-        AppLogger.log("hideProgress");
+       // AppLogger.log("hideProgress");
         if(getProgressViewImpl() != null){
             getProgressViewImpl().hideProgressBar(this);
         }

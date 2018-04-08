@@ -1,8 +1,7 @@
-package com.register.common.components;
+package com.melolchik.networkmanager.components;
 
 import android.support.annotation.StringRes;
-
-import com.register.common.util.Util;
+import com.melolchik.networkmanager.utils.Util;
 
 /**
  * Created by melolchik on 31.03.2017.
@@ -39,7 +38,7 @@ public class MessageItem {
 	}
 	
 	public void setTitle(@StringRes int title) {
-		mTitle = Util.getApplicationContext().getString(title);
+		mTitle = Util.getString(title);
 	}
 	
 	public String getMessage() {
