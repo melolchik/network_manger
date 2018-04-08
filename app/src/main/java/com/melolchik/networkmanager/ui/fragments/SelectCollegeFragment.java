@@ -49,8 +49,6 @@ public class SelectCollegeFragment extends BaseFragmentWithToolbar implements Se
 
     protected CollegeListAdapter mAdapter;
 
-    protected Handler mUiHandler;
-
     protected CollegeListener mPlaceListener = null;
 
     protected
